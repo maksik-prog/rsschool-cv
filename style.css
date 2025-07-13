@@ -1,1 +1,90 @@
-*{font-family: Arial, Helvetica, sans-serif;}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    scroll-behavior: smooth;
+}
+.container {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "nav nav"
+        "photo content"
+        "footer footer";
+    grid-template-columns: 300px 1fr ;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    gap: 20px;
+}
+header {
+    grid-area: header;
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 2px solid #0056b3;
+}
+nav {
+    background-color: #0056b3;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+a{
+    text-decoration: none;
+}
+.photo {
+    grid-area: photo;
+    text-align: center;
+    max-height: 50px;
+}
+.name{
+    color: #0056b3;
+}
+.photo img {
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    object-fit: cover;
+    border: 3px solid #0056b3;
+}
+.content {
+    grid-area: content;
+}
+h1, h2 {
+    color: #f2f3f4;
+    padding: 0 20px;
+}
+h2 {
+    border-bottom: 1px solid #0056b3;
+    padding-bottom: 5px;
+}
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+.info-item {
+    margin-bottom: 10px;
+}
+footer {
+    display: flex;
+    grid-area: footer;
+    text-align: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    border-top: 2px solid #0056b3;
+    margin-top: 20px;
+    max-width: 1200px;
+}
+.rs-school{
+    height: 100px;
+    width: 100px;
+}
+#github{
+    margin-right: 650px;
+}
